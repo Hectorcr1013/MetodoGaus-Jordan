@@ -2,7 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package metodocramer;
+package mx.itson.metodocramer.JFrame;
+
+import org.apache.commons.math3.fraction.BigFraction;
 
 /**
  *
@@ -43,9 +45,14 @@ public class JframeMatriz extends javax.swing.JFrame {
         ti1 = new javax.swing.JTextField();
         ti2 = new javax.swing.JTextField();
         ti3 = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        pnlCalcular = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txaResultados = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -60,46 +67,55 @@ public class JframeMatriz extends javax.swing.JFrame {
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 688, 38));
 
         x1.setBackground(new java.awt.Color(199, 199, 199));
+        x1.setForeground(new java.awt.Color(0, 0, 0));
         x1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         x1.setBorder(null);
         jPanel2.add(x1, new org.netbeans.lib.awtextra.AbsoluteConstraints(72, 110, 36, 36));
 
         x2.setBackground(new java.awt.Color(199, 199, 199));
+        x2.setForeground(new java.awt.Color(0, 0, 0));
         x2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         x2.setBorder(null);
         jPanel2.add(x2, new org.netbeans.lib.awtextra.AbsoluteConstraints(72, 177, 36, 37));
 
         x3.setBackground(new java.awt.Color(199, 199, 199));
+        x3.setForeground(new java.awt.Color(0, 0, 0));
         x3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         x3.setBorder(null);
         jPanel2.add(x3, new org.netbeans.lib.awtextra.AbsoluteConstraints(72, 249, 36, 36));
 
         y1.setBackground(new java.awt.Color(199, 199, 199));
+        y1.setForeground(new java.awt.Color(0, 0, 0));
         y1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         y1.setBorder(null);
         jPanel2.add(y1, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 110, 36, 36));
 
         y2.setBackground(new java.awt.Color(199, 199, 199));
+        y2.setForeground(new java.awt.Color(0, 0, 0));
         y2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         y2.setBorder(null);
         jPanel2.add(y2, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 177, 36, 37));
 
         y3.setBackground(new java.awt.Color(199, 199, 199));
+        y3.setForeground(new java.awt.Color(0, 0, 0));
         y3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         y3.setBorder(null);
         jPanel2.add(y3, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 249, 36, 36));
 
         z1.setBackground(new java.awt.Color(199, 199, 199));
+        z1.setForeground(new java.awt.Color(0, 0, 0));
         z1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         z1.setBorder(null);
         jPanel2.add(z1, new org.netbeans.lib.awtextra.AbsoluteConstraints(227, 110, 36, 36));
 
         z2.setBackground(new java.awt.Color(199, 199, 199));
+        z2.setForeground(new java.awt.Color(0, 0, 0));
         z2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         z2.setBorder(null);
         jPanel2.add(z2, new org.netbeans.lib.awtextra.AbsoluteConstraints(227, 177, 36, 37));
 
         z3.setBackground(new java.awt.Color(199, 199, 199));
+        z3.setForeground(new java.awt.Color(0, 0, 0));
         z3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         z3.setBorder(null);
         jPanel2.add(z3, new org.netbeans.lib.awtextra.AbsoluteConstraints(227, 249, 36, 36));
@@ -118,22 +134,28 @@ public class JframeMatriz extends javax.swing.JFrame {
         jLabel4.setText("Z");
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 310, -1, -1));
 
-        ti1.setEditable(false);
         ti1.setBackground(new java.awt.Color(199, 199, 199));
+        ti1.setForeground(new java.awt.Color(0, 0, 0));
+        ti1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         ti1.setBorder(null);
+        ti1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ti1ActionPerformed(evt);
+            }
+        });
         jPanel2.add(ti1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, 36, 36));
 
         ti2.setBackground(new java.awt.Color(199, 199, 199));
+        ti2.setForeground(new java.awt.Color(0, 0, 0));
+        ti2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         ti2.setBorder(null);
         jPanel2.add(ti2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 180, 36, 36));
 
         ti3.setBackground(new java.awt.Color(199, 199, 199));
+        ti3.setForeground(new java.awt.Color(0, 0, 0));
+        ti3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         ti3.setBorder(null);
         jPanel2.add(ti3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 250, 36, 36));
-
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 110, 200, 190));
 
         jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("TI");
@@ -143,6 +165,63 @@ public class JframeMatriz extends javax.swing.JFrame {
         jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jPanel2.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 110, 20, 180));
 
+        jPanel1.setBackground(new java.awt.Color(146, 146, 146));
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("Borrar");
+        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+        );
+
+        jPanel2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 380, 130, 40));
+
+        pnlCalcular.setBackground(new java.awt.Color(146, 146, 146));
+        pnlCalcular.setForeground(new java.awt.Color(255, 255, 255));
+        pnlCalcular.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pnlCalcularMouseClicked(evt);
+            }
+        });
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setText("Calcular");
+        jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        javax.swing.GroupLayout pnlCalcularLayout = new javax.swing.GroupLayout(pnlCalcular);
+        pnlCalcular.setLayout(pnlCalcularLayout);
+        pnlCalcularLayout.setHorizontalGroup(
+            pnlCalcularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        pnlCalcularLayout.setVerticalGroup(
+            pnlCalcularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+        );
+
+        jPanel2.add(pnlCalcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 380, 130, 40));
+
+        txaResultados.setEditable(false);
+        txaResultados.setBackground(new java.awt.Color(204, 204, 204));
+        txaResultados.setColumns(20);
+        txaResultados.setForeground(new java.awt.Color(0, 0, 0));
+        txaResultados.setRows(5);
+        jScrollPane1.setViewportView(txaResultados);
+
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 110, -1, 180));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -151,11 +230,56 @@ public class JframeMatriz extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void pnlCalcularMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlCalcularMouseClicked
+        
+        double X1 = Double.parseDouble(x1.getText());
+        double X2 = Double.parseDouble(x2.getText());
+        double X3 = Double.parseDouble(x3.getText());
+        
+        double Y1 = Double.parseDouble(y1.getText());
+        double Y2 = Double.parseDouble(y2.getText());
+        double Y3 = Double.parseDouble(y3.getText());
+        
+        double Z1 = Double.parseDouble(z1.getText());
+        double Z2 = Double.parseDouble(z2.getText());
+        double Z3 = Double.parseDouble(z3.getText());
+        
+        double TI1 = Double.parseDouble(ti1.getText());
+        double TI2 = Double.parseDouble(ti2.getText());
+        double TI3 = Double.parseDouble(ti3.getText());
+        
+        double detG = (X1 * ((Y2 * Z3) - (Y3 * Z2))) - (Y1 * ((X2 * Z3) - (X3 * Z2))) + (Z1 * ((X2 * Y3) - (X3 * Y2)));
+        double detX = (TI1 * ((Y2 * Z3) - (Y3 * Z2))) - (Y1 * ((TI2 * Z3) - (TI3 * Z2))) + (Z1 * ((TI2 * Y3) - (TI3 * Y2)));
+        double detY = (X1 * ((TI2 * Z3) - (TI3 * Z2))) - (TI1 * ((X2 * Z3) - (X3 * Z2))) + (Z1 * ((X2 * TI3) - (X3 * TI2)));
+        double detZ = (X1 * ((Y2 * TI3) - (Y3 * TI2))) - (Y1 * ((X2 * TI3) - (X3 * TI2))) + (TI1 * ((X2 * Y3) - (X3 * Y2)));
+        
+        BigFraction bigDetG = new BigFraction(detG);
+        BigFraction bigDetX = new BigFraction(detX);
+        BigFraction bigDetY = new BigFraction(detY);
+        BigFraction bigDetZ = new BigFraction(detZ);
+        
+        BigFraction bigX = bigDetX.divide(bigDetG);
+        BigFraction bigY = bigDetY.divide(bigDetG);
+        BigFraction bigZ = bigDetZ.divide(bigDetG);
+        
+        String respuesta = "Determinante general: " + bigDetG + "\n" + "Determinante X: " + bigDetX + "\n" + "Determinante Y: " + bigDetY + "\n" +
+                   "Determinante Z: " + bigDetZ + "\n" + "\n" + "X = " + bigX + "\n" + "Y = " + bigY + "\n" + "Z = " + bigZ;
+        
+        txaResultados.setText(respuesta);
+        
+    }//GEN-LAST:event_pnlCalcularMouseClicked
+
+    private void ti1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ti1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ti1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -190,6 +314,11 @@ public class JframeMatriz extends javax.swing.JFrame {
                 new JframeMatriz().setVisible(true);
             }
         });
+        
+        
+        //Inicio del procedimiento
+        
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -199,19 +328,24 @@ public class JframeMatriz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JTextField ti1;
-    private javax.swing.JTextField ti2;
-    private javax.swing.JTextField ti3;
-    private javax.swing.JTextField x1;
-    private javax.swing.JTextField x2;
-    private javax.swing.JTextField x3;
-    private javax.swing.JTextField y1;
-    private javax.swing.JTextField y2;
-    private javax.swing.JTextField y3;
-    private javax.swing.JTextField z1;
-    private javax.swing.JTextField z2;
-    private javax.swing.JTextField z3;
+    private javax.swing.JPanel pnlCalcular;
+    private static javax.swing.JTextField ti1;
+    private static javax.swing.JTextField ti2;
+    private static javax.swing.JTextField ti3;
+    private javax.swing.JTextArea txaResultados;
+    private static javax.swing.JTextField x1;
+    private static javax.swing.JTextField x2;
+    private static javax.swing.JTextField x3;
+    private static javax.swing.JTextField y1;
+    private static javax.swing.JTextField y2;
+    private static javax.swing.JTextField y3;
+    private static javax.swing.JTextField z1;
+    private static javax.swing.JTextField z2;
+    private static javax.swing.JTextField z3;
     // End of variables declaration//GEN-END:variables
 }
