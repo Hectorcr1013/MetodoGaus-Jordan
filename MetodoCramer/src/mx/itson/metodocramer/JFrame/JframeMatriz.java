@@ -47,7 +47,7 @@ public class JframeMatriz extends javax.swing.JFrame {
         ti3 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
-        jPanel1 = new javax.swing.JPanel();
+        pnlBorrar = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         pnlCalcular = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
@@ -165,7 +165,12 @@ public class JframeMatriz extends javax.swing.JFrame {
         jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jPanel2.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 110, 20, 180));
 
-        jPanel1.setBackground(new java.awt.Color(146, 146, 146));
+        pnlBorrar.setBackground(new java.awt.Color(146, 146, 146));
+        pnlBorrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pnlBorrarMouseClicked(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -173,18 +178,18 @@ public class JframeMatriz extends javax.swing.JFrame {
         jLabel5.setText("Borrar");
         jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout pnlBorrarLayout = new javax.swing.GroupLayout(pnlBorrar);
+        pnlBorrar.setLayout(pnlBorrarLayout);
+        pnlBorrarLayout.setHorizontalGroup(
+            pnlBorrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        pnlBorrarLayout.setVerticalGroup(
+            pnlBorrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
         );
 
-        jPanel2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 380, 130, 40));
+        jPanel2.add(pnlBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 380, 130, 40));
 
         pnlCalcular.setBackground(new java.awt.Color(146, 146, 146));
         pnlCalcular.setForeground(new java.awt.Color(255, 255, 255));
@@ -281,6 +286,23 @@ public class JframeMatriz extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ti1ActionPerformed
 
+    private void pnlBorrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlBorrarMouseClicked
+        x1.setText("");
+        x2.setText("");
+        x3.setText("");
+        y1.setText("");
+        y2.setText("");
+        y3.setText("");
+        z1.setText("");
+        z2.setText("");
+        z3.setText("");
+        ti1.setText("");
+        ti2.setText("");
+        ti3.setText("");
+        txaResultados.setText("");
+        
+    }//GEN-LAST:event_pnlBorrarMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -329,10 +351,10 @@ public class JframeMatriz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JPanel pnlBorrar;
     private javax.swing.JPanel pnlCalcular;
     private static javax.swing.JTextField ti1;
     private static javax.swing.JTextField ti2;
